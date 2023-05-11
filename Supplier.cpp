@@ -53,7 +53,7 @@ void Supplier::addProduct(std::string Name, float Price, std::string Description
     Products product;
     product.setName(Name);
     product.setPrice(Price);
-    product.setQuantity(0); 
+    product.setQuantity(0);
     product.setDescription(Description);
 
     this->store->products.push_back(product);
