@@ -15,49 +15,44 @@ void MarketPlace()
     cout << "Do you want to login as user or supplier: " << endl;
     cout << "1)User \t\t 2)Supplier";
     cin >> choice;
-    switch(choice){
-        case 1:
-            User *user = new User;
+    switch (choice)
+    {
+    case 1:
+        User *user;
 
-            cout << "****************************** Welcome to store ******************************\n\n" << endl;
-            cout << "Username: " << endl;
-            cin >> username;
-            cout << "Password: " << endl;
-            cin >> password;
+        cout << "****************************** Welcome to store ******************************\n\n"
+             << endl;
+        cout << "Username: " << endl;
+        cin >> username;
+        cout << "Password: " << endl;
+        cin >> password;
 
-            user->checkUsername(username);
-            user->checkPassword(password);
+        user->checkUsername(username);
+        user->checkPassword(password);
 
-            cout << "****************************** Welcome back Muhammad ******************************\n\n" << endl;
+        cout << "****************************** Welcome back Muhammad ******************************\n\n"
+             << endl;
 
-            cout << "Our store has: " << endl;
-            store.displayProducts();
+        cout << "Our store has: " << endl;
+        store.displayProducts();
 
-            cout << "\n\n\nEnter your choice: " << endl;
+        cout << "\n\n\nEnter your choice: " << endl;
 
-            break;
+        break;
         case 2:
-            Supplier *supplier = new Supplier;
+        Supplier *supplier;
 
-            cout << "****************************** Welcome to Store ******************************" << endl;
-            cout << "Username: " << endl;
-            cin >> username;
-            cout << "Password: " << endl;
-            cin >> password;
+        cout << "****************************** Welcome to Store ******************************" << endl;
+        cout << "Username: " << endl;
+        cin >> username;
+        cout << "Password: " << endl;
+        cin >> password;
 
-            supplier->checkUsername(username);
-            supplier->checkPassword(password);
+        supplier->checkUsername(username);
+        supplier->checkPassword(password);                                                                                                                               
 
-
-
-            break;
+        break;
     }
-
-    
-
-    
-
-    
 }
 
 void UserInterface(User u1)
@@ -90,7 +85,7 @@ void UserInterface(User u1)
 
         cout << "Please enter your choice: " << endl;
         cout << "1)Add to cart \t\t 2)Cancel Order \n 3)Order History" << endl;
-    label:
+    Label:
         cin >> choice;
 
         switch (choice)
@@ -107,7 +102,7 @@ void UserInterface(User u1)
 
         default:
             cout << "Please Enter correct option: ";
-            goto label;
+            goto Label;
             break;
         }
     }
